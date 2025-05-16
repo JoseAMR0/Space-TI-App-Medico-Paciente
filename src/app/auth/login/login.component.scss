@@ -1,0 +1,213 @@
+/* Variables de colores */
+:root {
+  --primary-color: #FFD700; /* Amarillo dorado */
+  --secondary-color: #FFF8DC; /* Crema */
+  --accent-color: #F0E68C; /* Amarillo khaki claro */
+  --text-color: #5D4037; /* Marrón café para texto */
+  --success-color: #8BC34A; /* Verde claro para el botón de registro */
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
+}
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-3 {
+  gap: 0.75rem;
+}
+
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.max-w-\[17\.35rem\] {
+  max-width: 17.35rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Contenedor principal del formulario */
+.flex.flex-col.md\:flex-row {
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px var(--shadow-color);
+  max-width: 800px;
+  margin: 2rem auto;
+  overflow: hidden;
+}
+
+/* Etiquetas de formulario */
+label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-color);
+  margin-bottom: 0.25rem;
+}
+
+/* Inputs de texto */
+input[type="text"], input[type="password"] {
+  padding: 0.75rem;
+  border: 2px solid var(--accent-color);
+  border-radius: var(--border-radius);
+  width: 100%;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: white;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.25);
+}
+
+/* Botón de Login */
+p-button[label="Login"] button {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: var(--text-color) !important;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+p-button[label="Login"] button:hover {
+  background-color: #FFE54C !important;
+  border-color: #FFE54C !important;
+  box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+/* Botón de Sign Up */
+p-button[label="Sign Up"] button {
+  background-color: var(--success-color) !important;
+  border-color: var(--success-color) !important;
+  color: white !important;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+p-button[label="Sign Up"] button:hover {
+  background-color: #9CCC65 !important;
+  border-color: #9CCC65 !important;
+  box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+/* Divisor */
+p-divider {
+  color: var(--text-color);
+}
+
+p-divider[layout="vertical"] div {
+  height: 100%;
+  min-height: 200px;
+}
+
+p-divider b {
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 50%;
+  color: var(--text-color);
+  font-weight: 600;
+  box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .md\:flex-row {
+    flex-direction: column;
+  }
+  
+  .md\:w-5\/12 {
+    width: 100%;
+  }
+  
+  .md\:w-2\/12 {
+    width: 100%;
+  }
+  
+  .md\:\!flex {
+    display: none !important;
+  }
+  
+  .md\:\!hidden {
+    display: flex !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .md\:flex-row {
+    flex-direction: row;
+  }
+  
+  .md\:w-5\/12 {
+    width: 41.666667%;
+  }
+  
+  .md\:w-2\/12 {
+    width: 16.666667%;
+  }
+  
+  .md\:\!flex {
+    display: flex !important;
+  }
+  
+  .md\:\!hidden {
+    display: none !important;
+  }
+}
+
+/* Efecto de logo médico */
+.w-full.md\:w-5\/12:first-child::before {
+  content: '👨‍⚕️ MediCitas';
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
